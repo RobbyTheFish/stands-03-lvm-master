@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
             cp ~vagrant/.ssh/auth* ~root/.ssh
             yum install -y mdadm smartmontools hdparm gdisk
           SHELL
-  
+        box.vm.provision "shell", path: "provision.sh"
         end
     end
   end
